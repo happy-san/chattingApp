@@ -20,6 +20,8 @@ class _UserImagePickerState extends State<UserImagePicker> {
     // can open a dialog to get either ImageSource.camera or ImageSource.gallery
     final pickedImageFile = await _imagePicker.getImage(
       source: ImageSource.camera,
+      imageQuality: 50,
+      maxWidth: 150,
     );
     setState(() {
       _pickedImage = File(pickedImageFile.path);

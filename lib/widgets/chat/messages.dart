@@ -30,6 +30,7 @@ class Messages extends StatelessWidget {
                       .toString()
                       .contains(FirebaseAuth.instance.currentUser.uid),
                   chatDocs[index].get('userName'),
+                  chatDocs[index].get('imageUrl'),
                   key: ValueKey(chatDocs[index].id));
             });
       },

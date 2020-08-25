@@ -21,10 +21,13 @@ class _NewMessageState extends State<NewMessage> {
         'text': _enteredMessage,
         'timeStamp': Timestamp.now(),
         'userId': userId,
-        'userName': userData.get('userName')
+        'userName': userData.get('userName'),
+        'imageUrl': userData.get('imageUrl'),
       });
       _controller.clear();
-    } catch (e) {}
+    } catch (e) {
+      print(e.toString());
+    }
   }
 
   @override
