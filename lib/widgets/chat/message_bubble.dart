@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 class MessageBubble extends StatelessWidget {
@@ -30,10 +28,10 @@ class MessageBubble extends StatelessWidget {
                       ? Theme.of(context).primaryColorLight
                       : Colors.grey[300],
                   borderRadius: BorderRadius.only(
-                    topLeft: isMe ? Radius.circular(12) : Radius.circular(0),
                     bottomLeft: Radius.circular(12),
-                    topRight: isMe ? Radius.circular(0) : Radius.circular(12),
-                    bottomRight: Radius.circular(12),
+                    topRight: Radius.circular(12),
+                    bottomRight:
+                        isMe ? Radius.circular(0) : Radius.circular(12),
                   ),
                 ),
                 padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
